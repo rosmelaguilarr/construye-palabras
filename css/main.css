@@ -176,10 +176,10 @@ body{
      display: none;
 }
 .message{
-     flex: 0 1 350px;
+     flex: 0 1 300px;
      border: solid 7px var(--blue-1);
      background-color: #eee;
-     padding: 2rem;
+     padding: 1rem;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -220,17 +220,20 @@ body{
      border-radius: 20px;
 }
 .message__start-btn{
-     width: 90%;
-     border: 0 ;
-     outline: 0;
-     padding: .5rem;
-     background-color: var(--blue-1);
-     color: #eee;
-     font-size: 1.4rem;
-     border-radius: 20px;
+     width: 120px;
      cursor: pointer;
-     font-weight: 300;
+     animation: 1.5s latido alternate infinite;
 }
+@keyframes latido {
+     from {
+      transform: scale(1);
+     }
+   
+     to {
+      transform: scale(.9);
+          
+     }
+   }
 .message__puntos{
      font-size: 1.3rem;
      color: #444;
