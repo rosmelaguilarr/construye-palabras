@@ -31,10 +31,10 @@ body{
 .header{
      text-align: center;
      color: var(--blue-1);
-     font-size: 2rem;
 }
 .title{
      margin-top: 1rem;
+     font-size: 4rem;
      font-family: var(--font-fredoka);
 }
 .main{
@@ -94,7 +94,6 @@ body{
      color: #444;
      user-select: none;
      border: 2px solid rgba(242, 144, 63, 0.3);
-
 }
 .time{
      flex: 45%;
@@ -129,7 +128,7 @@ body{
      box-sizing: content-box;
 }
 
-/*  */
+/* Drag and Drop */
 .droppable-hover{
      border: 3px solid var(--blue-1);
      transform: rotate(5deg)
@@ -202,16 +201,17 @@ body{
 .footer{
      margin-top: auto;
      text-align: center;
+     padding-top: 1.3rem;
 }
 .author{
-     font-style: italic;
      background-color: #444;
      padding: 0.3rem .8rem .4rem;
      color: #eee;
      border-radius: 15px;
      font-size: .9rem;
+     display: inline-block;
 }
-/*  */
+/* Message */
 .message__title{
      margin-top: 0;
      font-size: 2rem;
@@ -247,4 +247,47 @@ body{
 }
 .loser{
      color: var(--red);
+}
+/* Media queries */
+@media screen and (max-width: 1024px){
+     .title{
+          margin: .8rem 0;
+          font-size: 3rem;
+     }
+     .main{
+          flex-direction: column;
+     }
+     .main__picture{
+          flex: 0 1 50px;
+     }
+     .main__img{
+          width: 100px;
+          margin: 0 auto;
+     }
+     .main__abc{
+          order: 1;
+     }
+     .main__status{
+          flex-direction: row;
+          flex: 0 1 50px;
+          margin: 1rem 0;
+     }
+     .droppable-elements{
+          flex-wrap: wrap;
+          gap: 20px;
+     }
+     .droppable{
+          width: 60px;
+          height: 60px;
+     }
+     .droppable .draggable{
+          font-size: 2.5rem;
+          width: 60px;
+          height: 60px;
+     }
+}
+@media screen and (max-width: 500px){
+     .title{
+          font-size: 2.5rem ;
+     }
 }
