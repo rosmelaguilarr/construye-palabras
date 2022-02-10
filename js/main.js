@@ -156,6 +156,10 @@ const startGame = () => {
 startGame();
 
 $startBtn.addEventListener("click", e => {
+     $img.style.transform = "rotate(360deg)";
+     setTimeout(()=>{
+          $img.style.setProperty("transform", "rotate(0deg)");
+     }, 3000);
      $mensageContainer.style.display = "none";
      $droppableContainer.innerHTML = "";
      $draggableContainer.innerHTML = "";

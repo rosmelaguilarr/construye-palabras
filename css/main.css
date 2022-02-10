@@ -54,9 +54,9 @@ body{
      object-fit: cover;
      user-select: none;
      transition: all .1s ease-in-out;
-     animation: .8s slidein;
+     animation: .8s rotateImg;
 }
-@keyframes slidein {
+@keyframes rotateImg {
      from {
        transform: rotate(360deg);
      }
@@ -85,6 +85,11 @@ body{
      box-shadow: 0 0 20px var(--red) inset;
      font-size: 2.5rem;
      cursor: move;
+}
+.draggable:active{
+     background-color: var(--red);
+     color: #eee;
+     transform: scale(1.2);
 }
 .main__status{
      flex: 0 1 115px ;
@@ -213,7 +218,7 @@ body{
 }
 /* Message */
 .message__title{
-     margin-top: 0;
+     margin: 0 auto .5rem;
      font-size: 2rem;
      font-weight: 300;
      color: var(--red);
@@ -239,8 +244,12 @@ body{
      color: #444;
      text-align: center;
 }
+.aciertos, .fallos{
+     margin: .5rem auto;
+}
 .aciertos__span, .fallos__span{
      padding-left: 5px;
+     
 }
 .winner{
      color: var(--blue-1);
