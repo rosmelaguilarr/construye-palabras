@@ -146,9 +146,11 @@ const startGame = () => {
 
           if (time > 0 && letter.length === correct) {
                printMessage("winner", "¡Muy bien!");
+               clearInterval(countDown);
           }
           else if (time === 0 && letter.length > correct) {
                printMessage("loser", "¡Tiempo agotado!");
+               clearInterval(countDown)
           }
      }, 1000);
 } // End game
